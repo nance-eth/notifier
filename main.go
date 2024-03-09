@@ -21,6 +21,9 @@ type config struct {
 }
 
 func main() {
+	initDb()
+	os.Exit(0)
+
 	// Read env variables and create discord session
 	_, err := os.Stat(".env")
 	if !os.IsNotExist(err) {
@@ -104,4 +107,6 @@ func addSpace(space string, guildId string) {
 			}
 		}
 	}()
+
+	log.Println(spaceData)
 }

@@ -39,8 +39,14 @@ var commands = []*discordgo.ApplicationCommand{
 	},
 }
 
-var commmandHandlers = map[string]func(s *discordgo.Session, i *discordgo.InteractionCreate){
-	"subscribe":   func(s *discordgo.Session, i *discordgo.InteractionCreate) {},
-	"add-address": func(s *discordgo.Session, i *discordgo.InteractionCreate) {},
-	"unsubscribe": func(s *discordgo.Session, i *discordgo.InteractionCreate) {},
+var commandHandlers = map[string]func(s *discordgo.Session, i *discordgo.InteractionCreate){
+	"subscribe": func(s *discordgo.Session, i *discordgo.InteractionCreate) {
+		return
+	},
+	"add-address": func(s *discordgo.Session, i *discordgo.InteractionCreate) {
+		return
+	},
+	"unsubscribe": func(s *discordgo.Session, i *discordgo.InteractionCreate) {
+		return
+	},
 }
